@@ -1,22 +1,53 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home,
+    name: 'Start',
+    component: () => import(/* webpackChunkName: "start" */ '../views/Start.vue'),
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/login',
+    name: 'Login',
+    component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue'),
+  },
+  {
+    path: '/password-forgotten',
+    name: 'PasswordForgotten',
+    component: () => import(/* webpackChunkName: "passwordForgotten" */ '../views/PasswordForgotten.vue'),
+  },
+  {
+    path: '/password-reset',
+    name: 'PasswordForgottenSuccess',
+    component: () => import(/* webpackChunkName: "passwordForgottenSuccess" */'../views/PasswordForgottenSuccess.vue'),
+  },
+  {
+    path: '/register',
+    name: 'RegisterAccount',
+    component: () => import(/* webpackChunkName: "registerAccount" */ '../views/RegisterAccount.vue'),
+  },
+  {
+    path: '/register-success',
+    name: 'RegisterAccountSuccess',
+    component: () => import(/* webpackChunkName: "registerAccountSuccess" */ '../views/RegisterAccountSuccess.vue'),
+  },
+  {
+    path: '/events',
+    name: 'Events',
+    component: () => import(/* webpackChunkName: "events" */ '../views/Events.vue'),
+  },
+  {
+    path: '/events/1',
+    name: 'Event',
+    component: () => import(/* webpackChunkName: "event" */ '../views/Event.vue'),
+  },
+  {
+    path: '/events/1/register',
+    name: 'RegisterAthlete',
+    component: () => import(/* webpackChunkName: "registerAthlete" */ '../views/RegisterAthlete.vue'),
   },
 ];
 
