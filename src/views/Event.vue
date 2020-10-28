@@ -1,6 +1,8 @@
 <template>
   <div>
-    <Navigation/>
+    <Navigation>
+      <b-button variant="danger" :to="{ name: 'EventAdmin' }">Admin</b-button>
+    </Navigation>
     <EventHeader/>
     <div class="container-fluid mt-3">
       <router-link class="btn btn-outline-secondary btn-sm" :to="{ name: 'Events' }">
@@ -34,9 +36,9 @@
       </div>
       <hr>
       <h4>Downloads</h4>
-      <button class="btn btn-block btn-secondary">Ausschreibung</button>
-      <button class="btn btn-block btn-secondary">Checkliste</button>
-      <button class="btn btn-block btn-secondary">Regelwerk</button>
+      <button class="btn btn-block border-blue">Ausschreibung</button>
+      <button class="btn btn-block border-blue">Checkliste</button>
+      <button class="btn btn-block border-blue">Regelwerk</button>
       <hr>
       <h4>Registrierung</h4>
       <div class="mb-3">

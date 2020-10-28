@@ -1,35 +1,28 @@
 <template>
-  <div class="container">
-    <div class="row justify-content-between">
-      <img src="https://gemmaf.de/wp-content/uploads/2018/04/regelwerk_gemmaf.jpg"
-           height="100px" width="100px">
-      <div class="h4 bg-light text-wrap">Ahlete Management System</div>
+  <VisitorLayout title="Willkommen">
+    <p>
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
+      invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
+      et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+      Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+      diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+      voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+      gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <div class="d-flex justify-content-between">
+      <router-link :to="{ name: 'Login' }" class="btn btn-blue">Login</router-link>
+      <router-link :to="{ name: 'RegisterAccount' }" class="btn border-blue">
+        Registrieren
+      </router-link>
     </div>
-    <div class="flex-column mt-5 text-center">
-      <h1 class="bg-light">Willkommen</h1>
-      <p>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-        ngojdskhgkdsfag<br>
-      </p>
-      <router-link :to="{ name: 'Login' }" class="btn btn-primary">Login</router-link>
-      <router-link class="btn btn-primary">Registrieren</router-link>
-    </div>
-  </div>
+  </VisitorLayout>
 </template>
 
 <script>
+import VisitorLayout from '@/layouts/VisitorLayout.vue';
 
 export default {
   name: 'Start',
+  components: { VisitorLayout },
 };
 </script>

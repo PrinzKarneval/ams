@@ -1,21 +1,29 @@
 <template>
-  <nav class="navbar navbar-dark bg-success">
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-      </ul>
+  <div class="blue">
+    <div class="d-flex justify-content-between p-3">
+      <b-icon icon="list" font-scale="2" v-b-toggle.sidebar></b-icon>
+      <slot></slot>
     </div>
-  </nav>
+    <b-sidebar id="sidebar" backdrop backdrop-variant="dark" no-header shadow>
+      <div class="d-flex justify-content-around align-items-center blue py-4">
+        <b-avatar></b-avatar>
+        <div>
+          Franz Schwerdtmann<br>
+          Admin<br>
+          franz.schwerdtmann@gmail.com
+        </div>
+      </div>
+      <nav class="mt-3">
+        <b-nav vertical>
+          <b-nav-item :to="{ name: 'Events' }">Events</b-nav-item>
+          <b-nav-item :to="{ name: 'Events' }">Mein Team</b-nav-item>
+          <b-nav-item :to="{ name: 'Events' }">Anmeldungen</b-nav-item>
+          <b-nav-item :to="{ name: 'Events' }">Account</b-nav-item>
+          <b-nav-item :to="{ name: 'Start' }">Ausloggen</b-nav-item>
+        </b-nav>
+      </nav>
+    </b-sidebar>
+  </div>
 </template>
 
 <script>
@@ -25,5 +33,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

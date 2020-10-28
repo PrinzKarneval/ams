@@ -2,13 +2,13 @@
   <div class="card my-3">
     <img class="img-fluid" src="@/assets/mdm20.jpeg">
     <div class="card-body">
-      <div class="row mb-3">
+      <div class="row mb-2">
         <div class="col text-left">07.11.2020</div>
         <div class="col text-center">Göttingen</div>
-        <div class="col text-right">Reg. bis 14.08.2020</div>
+        <div class="col text-right">Amateure</div>
       </div>
       <div class="mb-2">
-        <router-link :to="{ name: 'Event' }" class="card-title h4">
+        <router-link :to="{ name: 'Event' }" class="card-title h4 text-blue">
           Mitteldeutsche Meisterschaften 2020
         </router-link>
       </div>

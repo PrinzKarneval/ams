@@ -24,7 +24,7 @@
           <option>Schwergewicht [-120.1 kg]</option>
         </select>
       </div>
-      <button class="btn btn-primary mb-3" @click="add">Hinzufügen</button>
+      <button class="btn btn-blue mb-3" @click="add">Hinzufügen</button>
       <div class="card mb-3" v-for="r in registrations" :key="r.id">
         <div class="card-body row">
           <div class="col-2">
