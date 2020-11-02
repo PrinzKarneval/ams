@@ -1,6 +1,6 @@
 <template>
   <div class="card my-3">
-    <img class="img-fluid" src="@/assets/mdm20.jpeg">
+    <img class="img-fluid logo" src="@/assets/mdm20.jpeg">
     <div class="card-body">
       <div class="row mb-2">
         <div class="col text-left">07.11.2020</div>
@@ -32,9 +32,11 @@ export default {
 </script>
 
 <style scoped>
-  img {
-    max-height: 200px;
-    height: auto;
-    width: auto;
+  .logo {
+    object-fit: contain;
+    max-height: 300px;
+  }
+  .card {
+    max-width: 500px;
   }
 </style>

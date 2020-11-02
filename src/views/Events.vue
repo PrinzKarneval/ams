@@ -1,10 +1,12 @@
 <template>
   <div>
     <Navigation/>
-    <div class="container-fluid">
-      <div class="flex-column text-left my-3">
-        <h4 class="text-blue">Kommende Veranstaltungen</h4>
-        <EventCard v-for="i in 5" :key="i"></EventCard>
+    <div class="container-fluid py-3">
+      <h4 class="text-blue">Kommende Veranstaltungen</h4>
+      <div class="row">
+        <div class="col-12 col-md-6 col-xl-4" v-for="i in 5" :key="i">
+          <EventCard/>
+        </div>
       </div>
     </div>
   </div>

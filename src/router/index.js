@@ -54,6 +54,11 @@ const routes = [
     name: 'RegisterAthlete',
     component: () => import(/* webpackChunkName: "registerAthlete" */ '../views/RegisterAthlete.vue'),
   },
+  {
+    path: '/events/1/success',
+    name: 'RegisterAthleteSuccess',
+    component: () => import(/* webpackChunkName: "registerAthleteSuccess" */ '../views/RegisterAthleteSuccess.vue'),
+  },
 ];
 
 const router = new VueRouter({
